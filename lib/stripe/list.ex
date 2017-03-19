@@ -24,5 +24,5 @@ defmodule Stripe.List do
           url: String.t()
         }
 
-  defstruct [:object, :data, :has_more, :total_count, :url]
+  defstruct [:object, :limit, :data, :has_more, :total_count, :url]
 end

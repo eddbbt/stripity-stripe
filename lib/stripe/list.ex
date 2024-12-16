@@ -18,11 +18,12 @@ defmodule Stripe.List do
 
   @type t(value) :: %__MODULE__{
           object: String.t(),
+          limit: integer | nil,
           data: [value],
           has_more: boolean,
           total_count: integer | nil,
           url: String.t()
         }
 
-  defstruct [:object, :data, :has_more, :total_count, :url]
+  defstruct [:object, :limit, :data, :has_more, :total_count, :url]
 end

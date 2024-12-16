@@ -118,4 +118,7 @@ defmodule Stripe.Converter do
   defp known_struct?(struct) do
     Code.ensure_loaded?(struct) && function_exported?(struct, :__struct__, 0)
   end
+
+  @spec stripe_map_to_struct(%{String.t() => any}) :: struct
+  def stripe_map_to_struct(response), do: convert_stripe_object(response)
 end
